@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if lt IE 7 ]><html class="ie ie6" lang="sl"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="sl"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="sl"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="sl"> <!--<![endif]-->
 <head>
-  <meta name="google-site-verification" content="K1tai4OQkE4AKa-4KvDY6rY-1ZRJEKFy9bU8mDc_l78" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ site.data.theme.name }} - {{ page.title }}</title>
-  <meta name="author" content="{{ site.data.theme.name }}" />
-  <meta name="description" content="The blog of {{ site.data.theme.name }}" />
+  <meta name="author" content="{{ site.data.theme.author }}" />
+  <meta name="description" content="{{ site.data.theme.description }}" />
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}" />
 
   <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
@@ -35,5 +34,6 @@
   </div>
 
 {% include analytics.html %}
+<script id="dsq-count-scr" src="//filips-github-blog.disqus.com/count.js" async></script>
 </body>
 </html>

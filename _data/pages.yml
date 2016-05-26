@@ -1,0 +1,8 @@
+- title: "Domača stran"
+  href: "/"
+
+- title: "O tem blogu"
+  href: "/about"
+
+- title: "Moji projekti"
+  href: "/projects"

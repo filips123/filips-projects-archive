@@ -1,0 +1,102 @@
+---
+title: PHP config
+layout: post
+---
+<p>S tem paketom boste lahko enostavno zapisovali konfiguracijske datoteke v obliki razredov ali pa v navadni.</p>
+
+<p>Na voljo je na&nbsp;<a href="https://github.com/fillips/php-config/" id="https://github.com/fillips/php-config/" name="https://github.com/fillips/php-config/" title="https://github.com/fillips/php-config/">https://github.com/fillips/php-config/</a></p>
+
+<h2>Namestitev</h2>
+
+<p>Vse datoteke razen README.md prenesite na strežnik.</p>
+
+<h2>Uporaba</h2>
+
+<ul>
+	<li>Najprej vpi&scaron;ite kodo:</li>
+</ul>
+
+<pre>
+<code>&lt;?php
+include(&#39;&#39;); //Med &#39; in &#39; vpi&scaron;ite pot do php-config.php datoteke.
+$config = new Config;
+$config-&gt;language(&#39;&#39;); //Med &#39; in &#39;; vpi&scaron;ite jezik (slovenian ali english)
+$config-&gt;showClass(); //Med ( in ) vpi&scaron;ite ali naj prikaže razred (1 ali 0).
+$config-&gt;showOther(); //Med ( in ) vpi&scaron;ite ali naj prikaže vrednosti zunaj razreda (1 ali 0).
+</code></pre>
+
+<ul>
+	<li>Dodajate lahko tudi komentarje:</li>
+</ul>
+
+<pre>
+<code>
+$config-&gt;comment(&#39;&#39;); //Med &#39; in &#39; vpi&scaron;ite komentar.
+</code></pre>
+
+<ul>
+	<li>Vrednosti dodajate s to kodo:</li>
+</ul>
+
+<pre>
+<code>$config-&gt;set(&#39;&#39;,&#39;&#39;,&#39;&#39;)//Prvi argument je ime vrednosti, drugi vrednost, tretji pa komentar (po želji).
+</code></pre>
+
+<ul>
+	<li>Za zapis v datoteko napi&scaron;ite &scaron;e:</li>
+</ul>
+
+<pre>
+<code>$data = $config-&gt;toString(&#39;&#39;,&#39;&#39;,&#39;&#39;); //Prvi argument je ime razreda (po želji drugače prazno), drugi je kaj naj bo v razredu (po želji drugače prazno), tretji pa dodatna koda izven razreda (po želji drugače prazno).
+$config-&gt;toFile(&#39;&#39;,$data); //Prvi argument je ime datoteke v katero se naj zapi&scaron;e, drugega pustite privzeto.
+?&gt;
+</code></pre>
+
+<h3>Prebiranje podatkov</h3>
+
+<ul>
+	<li>Če ste uporabili razred vpi&scaron;ite:</li>
+</ul>
+
+<pre>
+<code>&lt;?php
+include(&#39;pot_do_datoteke&#39;); //Namesto pot_do_datoteke vpi&scaron;ite pot do datoteke.
+$class = new class; //Namesto class vpi&scaron;ite ime razreda.
+$class-&gt;$ime_vrednosti; //Namesto class vpi&scaron;ite ime razreda, namesto ime_vrednosti vpi&scaron;ite ime vrednosti. Ta koda ne vrača vrednosti.Za izpis uporabite echo ali print.
+?&gt;
+</code></pre>
+
+<ul>
+	<li>Če niste uporabili razreda vpi&scaron;ite:</li>
+</ul>
+
+<pre>
+<code>&lt;?php
+include(&#39;pot_do_datoteke&#39;); //Namesto pot_do_datoteke vpi&scaron;ite pot do datoteke.
+$ime_vrednosti; //Namesto ime_vrednosti vpi&scaron;ite ime vrednosti. Ta koda ne vrača vrednosti.Za izpis uporabite echo ali print.
+?&gt;
+</code></pre>
+
+<h3>Napake</h3>
+
+<ul>
+	<li>Če jih želite napake, v datoteko, ki zapisuje config datoteko vpi&scaron;ite:</li>
+</ul>
+
+<pre>
+<code>&lt;?php
+echo $config-&gt;status_message();
+?&gt;
+</code>
+
+</pre>
+
+<ul>
+	<li>Če želite izpisati status v datoteko, ki zapisuje config datoteko vpi&scaron;ite:</li>
+</ul>
+
+<pre>
+<code>&lt;?php
+echo $config-&gt;status(); //1 pomeni dokončano, 0 pomeni napaka.
+?&gt;
+</code></pre>

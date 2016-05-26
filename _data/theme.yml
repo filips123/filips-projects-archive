@@ -3,26 +3,28 @@ highlight_color: '#3694d5'
 
 # Profile links on the left sidebar, leave blank to ignore
 social:
-  github: csexton
-  #bitbucket: csexton
-  #hacker_news: csexton
-  #stackexchange: 19839
-  #stackoverflow: 19839
-  twitter: crsexton
-  #facebook: csexton
-  #tumblr: animalygifs
-  #linkedin: philipjagielski
-  #gplus: 110552447039675960964
-  #gravatar: 86e6ff8f75f9daef42d53b7f8002fd95
-  #flickr: johndoe
+  github: fillips
+  #bitbucket: 
+  #hacker_news: 
+  #stackexchange: 
+  #stackoverflow: 
+  twitter: filipssi
+  facebook: filips.si
+  #tumblr: 
+  #linkedin: 
+  gplus: +FilipsSi
+  #gravatar: 
+  #flickr: 
 
 # "Hi, I'm _______"
-name: Christopher
-email: chris@codeography.com
-tagline: "Builder of Software"
+description:  Tukaj najdete moje GitHub projekte. 
+author: Filip Štamcar
+name: Filipov GitHub blog
+email: filip.stamcar@hotmail.com
+tagline: Moj GitHub blog"
 
 # Google Analytics key, leave blank to ignore
-google_analytics_key: UA-19710897-1
+google_analytics_key: UA-70086348-4
 
 # Toggle "Postings are my own" disclaimer in footer
 show_disclaimer: true

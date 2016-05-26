@@ -1,8 +1,8 @@
 # General Jekyll Config
-url: http://www.codeography.com
+url: http://projects.filips.si
 safe: true
 lsi: false
-exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
+exclude: [README.md, .gitignore, Gemfile, Gemfile.lock]
 kramdown:
   input: GFM
   hard_wrap: false
@@ -11,3 +11,19 @@ poole:
 gems:
   - jekyll-redirect-from
 excerpt_separator: <!--more-->
+timezone: Europe/Ljubljana
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "my-site"
+      author: "filips"
+  -
+    scope:
+      path: "projects"
+      type: "pages" # previously `page` in Jekyll 2.2.
+    values:
+      layout: "project" # overrides previous default layout
+      author: "filips"

@@ -1,5 +1,31 @@
+<style>
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+}
+
+nav li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+nav li a.active {
+    background-color: #d9d9d9;
+    color: white;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+</style>
 <nav>
-  <h1>Hi.</h1>
+  <h1>Pozdravljeni!</h1>
   <a href="/">
     {% if site.data.theme.social.gravatar %}
     <img src="http://www.gravatar.com/avatar/{{ site.data.theme.social.gravatar }}?s=200" id="gravatar" alt="My photo"/>
@@ -7,13 +33,69 @@
     <img src="/logo.png" style="height: 100px; width: 100px;" id="logo" alt="Blog logo"/>
     {% endif %}
   </a>
-  <h2>I'm <a href="/about">{{ site.data.theme.name }}</a>.</h2>
+  <h2>To je</br><a href="/about">{{ site.data.theme.name }}</a>.</h2>
   <div id="bio">
     <p>
-      Wrangler of dino-gymnasts. Builder of stuff and things. Goer of adventures.
+      Tukaj najdete moje Github projekte.
     </p>
   </div>
   <div id="social">
     {% include social.html %}
   </div>
 </nav>
+<hr>
+<nav>
+    <ul>
+        <li><a href="http://filips.si">Domača stran</a></li>
+        <li><a href="http://news.filips.si">Novice</a></li>
+        <li><a href="http://blog.filips.si">Spletni dnevnik</a></li>
+        <li>
+            <a href="{{ site.url }}/">Projekti ▼</a>
+            <ul>
+                <li><a href="{{ site.url }}/about">O tem blogu</a></li>
+                <li><a href="{{ site.url }}/projects">Projekti</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--<nav>
+  <ul>
+    {% for nav in site.data.pages %}
+      {% if nav.subcategories != null %}
+        0<li>
+          <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }} ▼</a>
+          <ul>
+          {% for subcategory in nav.subcategories %}
+            <li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+          {% endfor %}
+          </ul>
+        </li>
+      {% elsif nav.href  == page.id %}
+         1<li class="active">
+           <a class="active" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+         </li>
+      {% elsif nav.href == '/' AND page.path == 'index.html'  %}
+         {{ nav.href }}
+         2<li class="active">
+           <a class="active" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+         </li>
+      {% elsif nav.href == nav.href'.html' %}
+         3<li class="active">
+           <a class="active" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+         </li>
+      {% else %} 
+        4<li>
+          <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  -----
+  {{ page.path }}
+  ---
+  {{ page.id }}
+  ---
+  {{ site.url }}
+  -----
+</nav>
+-->

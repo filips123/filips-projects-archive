@@ -1,0 +1,11 @@
+---
+title: Moji projekti
+layout: default
+---
+<h1>Moji projekti</h1>
+
+<ul>
+{% for project in site.data.projects %}
+	<li><a href="https://github.com/filips123/{{ project.url }}">{{ project.name }}</a></li>
+{% endfor %}
+</ul>
