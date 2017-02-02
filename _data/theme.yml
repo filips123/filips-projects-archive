@@ -3,8 +3,8 @@ highlight_color: '#3694d5'
 
 # Profile links on the left sidebar, leave blank to ignore
 social:
-  github: fillips
-  #bitbucket: 
+  github: filips
+  bitbucket: filips
   #hacker_news: 
   #stackexchange: 
   #stackoverflow: 
@@ -19,9 +19,9 @@ social:
 # "Hi, I'm _______"
 description:  Tukaj najdete moje GitHub projekte. 
 author: Filip Štamcar
-name: Filipov GitHub blog
+name: Filipovi GitHub projekti
 email: filip.stamcar@hotmail.com
-tagline: Moj GitHub blog"
+tagline: Moji GitHub projekti
 
 # Google Analytics key, leave blank to ignore
 google_analytics_key: UA-70086348-4
